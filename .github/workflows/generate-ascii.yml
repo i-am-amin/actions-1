@@ -1,14 +1,11 @@
 name: Generate ASCII Artwork
-
 on: push
-
 jobs:
-    first_job:
+    ascii_job:
         runs-on: ubuntu-latest
-        
         steps:
         - name: List repo files
-          run: ls -ltrha
-
+          run: ls -ltra
+          
         - name: Executing Shell Script
           run: ./ascii_script.sh
