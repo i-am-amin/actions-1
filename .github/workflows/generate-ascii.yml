@@ -10,3 +10,7 @@ jobs:
         - name: List repo files
           run: ls -ltra
 
+        - name: Shell script
+          run: |
+            chmod +x ascii-script1.sh
+            ./ascii-script1.sh
