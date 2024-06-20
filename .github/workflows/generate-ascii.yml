@@ -6,6 +6,9 @@ jobs:
         steps:
         - name: List repo files
           run: ls -ltra
-          
+
+        - name: Giving Execute Permission
+          run: chmod +X ascii_script.sh
+
         - name: Executing Shell Script
           run: ./ascii_script.sh
