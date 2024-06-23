@@ -33,6 +33,7 @@ jobs:
               run: grep -i "dragon" dragon.txt
 
     deploy_job:
+        needs: test_job
         runs-on: ubuntu-latest
         steps:
             - name: download dragon-file
@@ -42,6 +43,6 @@ jobs:
             
             - name: define structure of downloaded files
               run: ls -R
-              
+
             - name: view dragon.txt
               run: cat dragon.txt
